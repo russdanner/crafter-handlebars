@@ -12,7 +12,7 @@ def handlebars = new Handlebars(loader)
     
 def template = handlebars.compile("test");
 def handlebarsContext = Context.newBuilder([firstName: "russ", lastName: "danner"])
-def output = template.apply(handlebarsContext)
+def output = template.apply([firstName: "russ", lastName: "danner"])
 
 
 templateModel.output = output
