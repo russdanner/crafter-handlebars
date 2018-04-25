@@ -11,7 +11,7 @@ def handlebars = new Handlebars(loader)
 def template = handlebars.compile("test");
 
 def hbContentModel = [:]
-hbContentModel.at = { return "yes" }
+hbContentModel.put("title", "ok")
 
 
 //hbContentModel.title = contentModel.queryValue("title")
