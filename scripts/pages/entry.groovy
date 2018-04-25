@@ -14,7 +14,7 @@ def handlebars = new Handlebars(loader)
 def template = handlebars.compile("test");
 
 def hbContentModel = [:]
-hbContentModel.title = contentModel.queryValue("title").text
+hbContentModel.title = contentModel.queryValue("title")
 
 def handlebarsModel = [firstName: "russ", lastName: "danner", contentModel: hbContentModel]
 def output = template.apply(handlebarsModel)
