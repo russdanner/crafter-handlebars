@@ -19,8 +19,8 @@ def hbContentModel = new HashMap() {
     	return "YES"
     }
     
-     public Object getOrDefault(String key, Obj v) {
-    	return "YES"
+     public boolean containsKey(Object key) {
+    	return true
     }
 }
 
