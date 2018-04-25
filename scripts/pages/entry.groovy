@@ -18,9 +18,12 @@ def hbContentModel = new HashMap() {
     public Object get(String key) {
     	return "YES"
     }
+    
+     public Object getOrDefault(String key, Obj v) {
+    	return "YES"
+    }
 }
 
-hbContentModel.title = "c"
 
 //hbContentModel.title = contentModel.queryValue("title")
 
