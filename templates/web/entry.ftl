@@ -8,7 +8,9 @@
 	</head>
 	<body>
     	<div <@studio.iceAttr iceGroup="title"/>>
-			<h1>${model.title} | ${output}</h1>
+			<h1>${model.title}</h1>
+            
+            ${output}
         </div>
       
     	<div <@studio.iceAttr iceGroup="main"/>>
