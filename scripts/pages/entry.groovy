@@ -13,12 +13,8 @@ def handlebars = new Handlebars(loader)
     
 def template = handlebars.compile("test");
 
-def hbContentModel = {
-	
-    public Object get(String key) {
-    	return "YES"
-    }
-} as Map
+def hbContentModel = [:]
+hbContentModel.get = { return "yes" }
 
 
 //hbContentModel.title = contentModel.queryValue("title")
