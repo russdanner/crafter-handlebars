@@ -11,8 +11,8 @@ def handlebars = new Handlebars(loader)
 def template = handlebars.compile("test");
 
 def hbContentModel = [:]
-contentModel.dom.selectNodes("//*").each{ -> node
-	hbContentModel.put(node.id, node.text)
+contentModel.dom.selectNodes("//*").each { -> node
+	hbContentModel.put(node.name, node.value)
 }
 
 
