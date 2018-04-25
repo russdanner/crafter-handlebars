@@ -11,13 +11,7 @@ def handlebars = new Handlebars(loader)
 def template = handlebars.compile("test");
 
 def hbContentModel = [:]
-contentModel.dom.selectNodes("//*").each { node ->
-	logger.info("xxxxx putting "+node.name+" WITH "+node.text)
-	hbContentModel.put(node.name, node.text)
-}
-
-
-//hbContentModel.title = contentModel.queryValue("title")
+contentModel.dom.selectNodes("//*").each{ node -> hbContentModel.put(node.name, node.text) }
 
 def handlebarsModel = [firstName: "russ", lastName: "danner", contentModel: hbContentModel]
 def output = template.apply(handlebarsModel)
