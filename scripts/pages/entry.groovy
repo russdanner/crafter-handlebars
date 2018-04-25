@@ -2,10 +2,7 @@
 
 import com.github.jknack.handlebars.Handlebars
 import com.github.jknack.handlebars.Template
-import com.github.jknack.handlebars.Context
-import com.github.jknack.handlebars.io.TemplateLoader
 import com.github.jknack.handlebars.io.FileTemplateLoader
-import com.github.jknack.handlebars.Context
 
 
 def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
