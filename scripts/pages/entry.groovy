@@ -11,9 +11,10 @@ def handlebars = new Handlebars(loader)
 def template = handlebars.compile("test");
 
 def hbContentModel = [:]
-contentModel.dom.selectNodes("//*").each { -> node
-	hbContentModel.put(node.name, node.value)
-}
+contentModel.dom.selectNodes("//*")
+//.each { -> node
+//	hbContentModel.put(node.name, node.value)
+//}
 
 
 //hbContentModel.title = contentModel.queryValue("title")
