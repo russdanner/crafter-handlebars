@@ -12,7 +12,7 @@ def template = handlebars.compile("test");
 
 def hbContentModel = [:]
 contentModel.dom.selectNodes("//*").each { node ->
-	logger.info("xxxxx putting "+node.name+" WITH "+node.value)
+	logger.info("xxxxx putting "+node.name+" WITH "+node.getValue())
 	hbContentModel.put(node.name, node.value)
 }
 
