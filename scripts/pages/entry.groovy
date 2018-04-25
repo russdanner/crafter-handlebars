@@ -11,8 +11,8 @@ def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/crafter
 def handlebars = new Handlebars(loader)
     
 def template = handlebars.compile("test");
-def handlebarsContext = Context.newBuilder([firstName: "russ", lastName: "danner"])
-def output = template.apply([firstName: "russ", lastName: "danner"])
+def handlebarsModel = [firstName: "russ", lastName: "danner", contentModel: contentModel]
+def output = template.apply(handlebarsModel)
 
 
 templateModel.output = output
