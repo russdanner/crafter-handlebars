@@ -7,8 +7,8 @@ import com.github.jknack.handlebars.io.TemplateLoader
 import com.github.jknack.handlebars.io.FileTemplateLoader
 import com.github.jknack.handlebars.Context;
 
-def TemplateLoader loader = new FileTemplateLoader("/templates", ".hbs");
-def Handlebars= new Handlebars(loader)
+def loader = new FileTemplateLoader("/templates", ".hbs");
+def handlebars = new Handlebars(loader)
     
 def template = handlebars.compile(templateName);
 def context = Context.newBuilder([firstName: "russ", lastName: "danner"])
