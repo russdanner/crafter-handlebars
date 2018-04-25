@@ -14,10 +14,13 @@ def handlebars = new Handlebars(loader)
 def template = handlebars.compile("test");
 
 def hbContentModel = new HashMap() {
-	public Object get(String key) {
+	
+    public Object get(String key) {
     	return "YES"
     }
 }
+
+hbContentModel.title = "c"
 
 //hbContentModel.title = contentModel.queryValue("title")
 
