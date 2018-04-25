@@ -16,7 +16,7 @@ def template = handlebars.compile("test");
 def hbContentModel = [:]
 hbContentModel.title = "S"+contentModel.queryValue("title")
 
-def handlebarsModel = [firstName: "russ", lastName: "danner", contentModel: hbContentModel]
+def handlebarsModel = [firstName: "russ", lastName: "danner", contentModel: contentModel]
 def output = template.apply(handlebarsModel)
 
 
