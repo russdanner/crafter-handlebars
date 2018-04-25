@@ -10,7 +10,7 @@ import com.github.jknack.handlebars.Context;
 def loader = new FileTemplateLoader("/templates", ".hbs");
 def handlebars = new Handlebars(loader)
     
-def template = handlebars.compile(templateName);
+def template = handlebars.compile("test");
 def context = Context.newBuilder([firstName: "russ", lastName: "danner"])
 def output = template.apply(context)
 
