@@ -13,7 +13,7 @@ def handlebars = new Handlebars(loader)
     
 def template = handlebars.compile("test");
 
-def hbContentModel = new HashMap() {
+def hbContentModel = new Map() {
 	
     public Object get(String key) {
     	return "YES"
