@@ -1,6 +1,6 @@
 import handlebars.HandlebarsProcessor
 
-def handlebars = new HandlebarsProcessor()
+def handlebars = applicationContext.get("handlebars")
 
 def output = handlebars.process(contentModel)
 
