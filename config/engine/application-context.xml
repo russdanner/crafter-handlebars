@@ -6,6 +6,7 @@
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer" parent="crafter.properties"/>
 
     <bean id="handlebars" class="handlebars.HandlebarsProcessor">
+    	<property name="storeService" ref="crafter.contentStoreService"/>
     </bean>
 
 </beans>
