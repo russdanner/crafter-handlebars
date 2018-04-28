@@ -1,3 +1,3 @@
 <#macro template params...>
-	${handlebars.process(contentModel)}
+	${handlebars.process(params)}
 </#macro>	
