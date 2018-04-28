@@ -9,16 +9,9 @@
 	<body>
     
     	
-    	<div <@studio.iceAttr iceGroup="title"/>>
-			<h1>${model.title}</h1>
             
-           ${handlebars.process(contentModel)}
            
-        </div>
-      
-    	<div <@studio.iceAttr iceGroup="main"/>>
-            ${model.body}
-        </div>
+           
 
 		<@studio.toolSupport/>	
 	</body>
