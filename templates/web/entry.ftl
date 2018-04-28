@@ -1,4 +1,5 @@
 <#import "/templates/system/common/cstudio-support.ftl" as studio />
+<#import "/templates/web/handlebars.ftl" hbs />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,7 @@
 	<body>
     
     	
-            
+           <@hbs.template contentModel /> 
            
            
 
