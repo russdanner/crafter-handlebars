@@ -7,10 +7,13 @@
       <title>${model.title}</title>
 	</head>
 	<body>
+    
+    	
     	<div <@studio.iceAttr iceGroup="title"/>>
 			<h1>${model.title}</h1>
             
-            ${output}
+           ${handlebars.process(contentModel)}
+           
         </div>
       
     	<div <@studio.iceAttr iceGroup="main"/>>
