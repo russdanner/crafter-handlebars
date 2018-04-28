@@ -1,5 +1,5 @@
 <#macro template templateName="" params...>
-	<#assign  = siteContext.context.rootFolderPath?replace("file:","") />
+	<#assign templateRoot siteContext.context.rootFolderPath?replace("file:","") />
 	   
 	<#if templateName?? && templateName!="">
        ${handlebars.process(tempateRoot, templateName, params)}
