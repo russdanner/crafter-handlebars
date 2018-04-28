@@ -6,7 +6,7 @@ import com.github.jknack.handlebars.io.FileTemplateLoader
 
 public class HandlebarsProcessor {
 	
-    def process() {
+    def process(contentModel) {
    		def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
 		
         def handlebars = new Handlebars(loader)
