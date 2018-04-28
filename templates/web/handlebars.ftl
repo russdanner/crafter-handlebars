@@ -2,6 +2,6 @@
 	<#if templateName?? && templateName!="">
 	   ${handlebars.process(templateName, params)}
     <#else>
-    	INLINE
+    	${handlebars.processInlineTemplate("BOO", params)}
     </#if>
 </#macro>	
