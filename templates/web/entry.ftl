@@ -10,7 +10,7 @@
 	<body>
     
     	
-           <@hbs.template contentModel /> 
+           <@hbs.template russ,danner,contentModel /> 
            
            
 
