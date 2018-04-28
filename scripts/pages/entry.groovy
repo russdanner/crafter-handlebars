@@ -1,0 +1,1 @@
+templateModel.rf =context.rootFolderPath
