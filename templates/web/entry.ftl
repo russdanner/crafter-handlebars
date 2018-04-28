@@ -11,7 +11,7 @@
     
 	<body>
 
-           <@hbs.template templateName="test" firstName="russ" lastName="danner" title=contentModel.title?string />
+           <@hbs.template templateName="" firstName="russ" lastName="danner" title=contentModel.title?string />
            
            <@hbs.template aVariable="a-b-c-1-2-3">
               <div style='border:10px solid blue'>
