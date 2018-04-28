@@ -1,3 +1,3 @@
-<#macro template params...>
-	${handlebars.process(params)}
+<#macro templateName params...>
+	${handlebars.process(templateName, params)}
 </#macro>	
