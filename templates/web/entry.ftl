@@ -11,7 +11,7 @@
     
 	<body>
 
-           <@hbs.template templateName="test" firstName="russ" lastName="danner" title=contentModel.title?string /> 
+           <@hbs.template "test" firstName="russ" lastName="danner" title=contentModel.title?string /> 
            
            
 
