@@ -6,14 +6,14 @@ import com.github.jknack.handlebars.io.FileTemplateLoader
 
 public class HandlebarsProcessor {
 	
-    def process(contentModel) {
+    def process(values) {
    		def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
 		
         def handlebars = new Handlebars(loader)
         def template = handlebars.compile("test");
         def hbContentModel = [:]
         contentModel.dom.selectNodes("//*").each{ node -> hbContentModel.put(node.name, node.text) }
-		def handlebarsModel = [firstName: "russ", lastName: "danner", contentModel: hbContentModel]
+		def handlebarsModel = values  //[firstName: "russ", lastName: "danner", contentModel: hbContentModel]
 		def output = template.apply(handlebarsModel)
     }
 }
