@@ -17,11 +17,7 @@
               <div style='border:10px solid green'>
                 <b>It's easy as:</b> {{aVariable}}<br/>
               </div>           			
-           </@hbs.template>
-           
-           ${siteContext.context.rootFolderPath}
-           
-           
+           </@hbs.template>      
 
 		<@studio.toolSupport/>	
 	</body>
