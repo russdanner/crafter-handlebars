@@ -10,7 +10,7 @@
 	<body>
     
     	
-           <@hbs.template  [firsName:"russ", lastName:"danner", title:contentModel.title] /> 
+           <@hbs.template  firsName="russ", lastName="danner", title=contentModel.title] /> 
            
            
 
