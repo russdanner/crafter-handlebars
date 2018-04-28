@@ -5,6 +5,7 @@
 
 
     <bean id="handlebars" class="handlebars.HandlebarsProcessor">
+      <!-- inject a crafterCache bean -->
     </bean>
 
 </beans>
