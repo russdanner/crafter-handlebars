@@ -5,9 +5,19 @@ import com.github.jknack.handlebars.Template
 import com.github.jknack.handlebars.io.FileTemplateLoader
 
 public class HandlebarsProcessor {
-	
+
+	def getTemplatesRootPath() {
+    	return "/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates"
+    }
+    
+    /**
+     * render a template with the given name 
+     * @param templateName contains the name or relative path and name of the template.  .hbs is assumed
+     * @param values a kev value map of template variables
+     * returns the resulting markup as a string
+     */
     def process(templateName, values) {
-   		def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
+   		def loader = new FileTemplateLoader(getTemplatesRootPath(), ".hbs");
 		
         def handlebars = new Handlebars(loader)
         def template = handlebars.compile(templateName)
@@ -17,9 +27,15 @@ public class HandlebarsProcessor {
         return output
     }
     
+    /**
+     * render inline template 
+     * @param templateText contains the inline template
+     * @param values a kev value map of template variables
+     * returns the resulting markup as a string
+     */
     def processInlineTemplate(templateText, values) {
         
-        def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
+        def loader = new FileTemplateLoader(getTemplatesRootPath(), ".hbs");
         def handlebars = new Handlebars(loader)
         def template = handlebars.compileInline(templateText)
 		def handlebarsModel = values
