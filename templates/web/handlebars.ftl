@@ -1,5 +1,5 @@
-<#macro template=NULL templateName params...>
-	<#if templateName??>
+<#macro template="" templateName params...>
+	<#if templateName?? && templateName!="">
 	   ${handlebars.process(templateName, params)}
     <#else>
     	INLINE
