@@ -1,2 +1,3 @@
-<#macro template path="">
+<#macro template params...>
+	${handlebars.process(contentModel)}
 </#macro>	
