@@ -1,1 +1,1 @@
-templateModel.rf = siteContext.current.rootFolderPath
+templateModel.rf = siteContext.current
