@@ -4,17 +4,13 @@ import com.github.jknack.handlebars.Handlebars
 import com.github.jknack.handlebars.Template
 import com.github.jknack.handlebars.io.FileTemplateLoader
 
+/**
+ * simple service to invoke handlebars
+ * future points of extension: inject Crafter Cache and cache templates
+ */
 public class HandlebarsProcessor {
 
-	def storeService
-	def setStoreService(service) { this.storeService = storeService }
-    def getStoreService() { return this.storeService } 
-    
-	def getTemplatesRootPath() {
-    	return "/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates"
-    }
-    
-    /**
+	/**
      * render a template with the given name 
      * @param templateName contains the name or relative path and name of the template.  .hbs is assumed
      * @param values a kev value map of template variables
