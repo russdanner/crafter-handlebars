@@ -14,7 +14,7 @@
 	<body>
     
     	
-           <@template firstName="russ" lastName="danner" title=contentModel.title[0] /> 
+           <@template firstName="russ" lastName="danner" title=contentModel.title[0].text /> 
            
            
 
