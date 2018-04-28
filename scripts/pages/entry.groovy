@@ -1,1 +1,1 @@
-templateModel.rf = siteContext
+templateModel.rf = siteContext.storeAdapter
