@@ -19,7 +19,7 @@
               </div>           			
            </@hbs.template>
            
-           ${context.rootFolderPath}
+           ${rf}
            
            
 
