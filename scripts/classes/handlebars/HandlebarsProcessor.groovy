@@ -39,7 +39,7 @@ public class HandlebarsProcessor {
      */
     def processInlineTemplate(templateRoot, templateText, values) {
         
-        def loader = new FileTemplateLoader(templateRoot, getTemplatesRootPath(), ".hbs");
+        def loader = new FileTemplateLoader(templateRoot, ".hbs");
         def handlebars = new Handlebars(loader)
         def template = handlebars.compileInline(templateText)
 		def handlebarsModel = values
