@@ -20,8 +20,8 @@ public class HandlebarsProcessor {
      * @param values a kev value map of template variables
      * returns the resulting markup as a string
      */
-    def process(templateName, values) {
-   		def loader = new FileTemplateLoader(getTemplatesRootPath(), ".hbs");
+    def process(templateRoot, templateName, values) {
+   		def loader = new FileTemplateLoader(templateRoot, ".hbs");
 		
         def handlebars = new Handlebars(loader)
         def template = handlebars.compile(templateName)
@@ -37,9 +37,9 @@ public class HandlebarsProcessor {
      * @param values a kev value map of template variables
      * returns the resulting markup as a string
      */
-    def processInlineTemplate(templateText, values) {
+    def processInlineTemplate(templateRoot, templateText, values) {
         
-        def loader = new FileTemplateLoader(getTemplatesRootPath(), ".hbs");
+        def loader = new FileTemplateLoader(templateRoot, getTemplatesRootPath(), ".hbs");
         def handlebars = new Handlebars(loader)
         def template = handlebars.compileInline(templateText)
 		def handlebarsModel = values
