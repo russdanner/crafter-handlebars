@@ -1,5 +1,5 @@
 <#import "/templates/system/common/cstudio-support.ftl" as studio />
-<#import "/templates/web/handlebars.ftl" hbs />
+<#import "/templates/web/handlebars.ftl" as hbs />
 
 <!DOCTYPE html>
 <html lang="en">
