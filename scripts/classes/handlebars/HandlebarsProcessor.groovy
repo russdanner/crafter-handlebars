@@ -6,6 +6,10 @@ import com.github.jknack.handlebars.io.FileTemplateLoader
 
 public class HandlebarsProcessor {
 
+	def storeService
+	def setStoreService(service) { this.storeService = storeService }
+    def getStoreService() { return this.storeService } 
+    
 	def getTemplatesRootPath() {
     	return "/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates"
     }
