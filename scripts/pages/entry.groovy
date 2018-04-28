@@ -1,1 +1,1 @@
-templateModel.rf = siteContext.FileSystemContext
+templateModel.rf = siteContext
