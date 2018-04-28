@@ -19,6 +19,8 @@ public class HandlebarsProcessor {
     
     def processInlineTemplate(templateText, values) {
         
+        def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
+        def handlebars = new Handlebars(loader)
         def template = handlebars.compileInline(templateText)
 		def handlebarsModel = values
 		def output = template.apply(handlebarsModel)
