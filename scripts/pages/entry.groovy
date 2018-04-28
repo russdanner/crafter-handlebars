@@ -1,1 +1,1 @@
-templateModel.rf = siteContext.current
+templateModel.rf = siteContext.current.applicationContextPaths
