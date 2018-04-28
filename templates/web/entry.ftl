@@ -19,6 +19,8 @@
               </div>           			
            </@hbs.template>
            
+           ${context.rootFolderPath}
+           
            
 
 		<@studio.toolSupport/>	
