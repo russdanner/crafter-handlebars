@@ -13,7 +13,7 @@
 	</head>
 	<body>
     
-    	
+    	${contentModel.title}
            <@template firstName="russ" lastName="danner" title=contentModel.title /> 
            
            
