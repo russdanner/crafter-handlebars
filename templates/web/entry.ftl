@@ -1,9 +1,6 @@
 <#import "/templates/system/common/cstudio-support.ftl" as studio />
 <#import "/templates/web/handlebars.ftl" as hbs />
 
-<#macro template params...>
-	${handlebars.process(params)}
-</#macro>	
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +8,10 @@
       <meta charset="utf-8">
       <title>${model.title}</title>
 	</head>
-	<body>
     
-    	${contentModel.title}
-           <@template firstName="russ" lastName="danner" title=contentModel.title?string /> 
+	<body>
+
+           <@hbs.template firstName="russ" lastName="danner" title=contentModel.title?string /> 
            
            
 
