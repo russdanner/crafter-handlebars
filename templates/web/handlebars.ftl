@@ -1,0 +1,2 @@
+<#macro template path="">
+</#macro>	
