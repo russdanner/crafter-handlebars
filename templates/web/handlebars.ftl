@@ -1,8 +1,10 @@
 <#macro template templateName="" params...>
+	<#assign  = siteContext.context.rootFolderPath?replace("file:","") />
+	   
 	<#if templateName?? && templateName!="">
-	   ${handlebars.process(templateName, params)}
+       ${handlebars.process(tempateRoot, templateName, params)}
     <#else>
     	<#local inlineTemplate><#nested/></#local>
-    	${handlebars.processInlineTemplate(inlineTemplate, params)}
+    	${handlebars.processInlineTemplate(tempateRoot, inlineTemplate, params)}
     </#if>
 </#macro>	
