@@ -10,10 +10,19 @@ public class HandlebarsProcessor {
    		def loader = new FileTemplateLoader("/Users/rdanner/crafter-installs/ent/craftercms/crafter-authoring/data/repos/sites/handlebars/sandbox/templates", ".hbs");
 		
         def handlebars = new Handlebars(loader)
-        def template = handlebars.compile(templateName);
-        //def hbContentModel = [:]
-        //contentModel.dom.selectNodes("//*").each{ node -> hbContentModel.put(node.name, node.text) }
-		def handlebarsModel = values  //[firstName: "russ", lastName: "danner", contentModel: hbContentModel]
+        def template = handlebars.compile(templateName)
+		def handlebarsModel = values
 		def output = template.apply(handlebarsModel)
+        
+        return output
+    }
+    
+    def processInlineTemplate(templateText values) {
+        
+        def template = handlebars.compile(templateText)
+		def handlebarsModel = values
+		def output = template.apply(handlebarsModel)
+        
+        return output
     }
 }
