@@ -19,7 +19,7 @@ public class HandlebarsProcessor {
     
     def processInlineTemplate(templateText, values) {
         
-        def template = handlebars.compile(templateText)
+        def template = handlebars.compileInline(templateText)
 		def handlebarsModel = values
 		def output = template.apply(handlebarsModel)
         
